@@ -5,5 +5,5 @@
 # Fixed stuttering and vibrating
 -> Lab1_Q2_new_Before
 
-# Lastest version
+# Latest version
 -> Lab1_Q2_new_After (the motor now moves likes a car wiper)
