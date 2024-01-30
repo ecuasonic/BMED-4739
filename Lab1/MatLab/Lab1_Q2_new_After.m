@@ -13,8 +13,8 @@ s = serial("COM3", 'BaudRate', 9600);
 RPM = 30;
 ARD_TIME = 0.5;
 
-% change this variable to change the angle
-degA = 45;
+% degrees
+degA = 180;
 
 % radians
 OMEGA = (rpm / 60)*2*pi;
@@ -37,6 +37,10 @@ try
 
         % waits for motor to finish
         pause(time + ardTime);
+
+        % flips the angle
+        % to simulate sinusoidal motion
+        degA = -degA;
     end
     
     fclose(s);
