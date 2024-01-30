@@ -6,4 +6,4 @@
 -> Lab1_Q2_new_Before
 
 # Lastest version
--> Lab1_Q2_new_Afer (the motor now moves likes a car wiper)
+-> Lab1_Q2_new_After (the motor now moves likes a car wiper)
