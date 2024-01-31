@@ -14,11 +14,11 @@ RPM = 30;
 ARD_TIME = 0.5;
 
 % degrees
-degA = 180;
+A = 180;
 
 % radians
 OMEGA = (rpm / 60)*2*pi;
-A = degA * (pi/180);
+theta = 0;
 
 try
     fopen(s);
@@ -37,10 +37,8 @@ try
 
         % waits for motor to finish
         pause(time + ardTime);
-
-        % flips the angle
-        % to simulate sinusoidal motion
-        degA = -degA;
+        
+        degA = A*sin(OMEGA*t) - degA;
     end
     
     fclose(s);
