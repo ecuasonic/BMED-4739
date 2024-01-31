@@ -20,7 +20,7 @@ while true
     
     theta = A*sin(omega*t);
     fprintf(arduino, '%f\n', theta - prevTheta);
-    pause((theta * 60) / rpm);
+    pause(theta / rpm);
     t = t+dt;
     prevTheta = theta;
 end
