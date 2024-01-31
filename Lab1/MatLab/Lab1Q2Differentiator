@@ -12,6 +12,7 @@ A = 90;
 omega = 1;
 dt = 0.2;
 t = 0;
+rpm = 30
 
 tic
 prevTheta = 0;
@@ -19,8 +20,8 @@ while true
     
     theta = A*sin(omega*t);
     fprintf(arduino, '%f\n', theta - prevTheta);
-    pause(.9);
-    t = t+dt
+    pause((theta * 60) / rpm);
+    t = t+dt;
     prevTheta = theta;
 end
 
