@@ -29,18 +29,21 @@ try
     % time it takes for motor to finish
     time = A / OMEGA;
 
+    prevTheta = 0;
     while true
-
+        theta = A*sin(OMEGA*time);
+        
         % sends data to Arduino through serial
-        fprintf(s, '%d\n',  degA);
-        disp(degA);
+        fprintf(s, '%d\n',  theta - prevTheta);
+        disp(theta);
+        disp(theta - prevTheta);
 
         % waits for motor to finish
         pause(time + ardTime);
 
         % flips the angle
         % to simulate sinusoidal motion
-        degA = -degA;
+        prevTheta = theta.
     end
     
     fclose(s);
