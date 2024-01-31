@@ -27,7 +27,7 @@ try
     pause(2); 
 
     % time it takes for motor to finish
-    time = A / omega;
+    time = A / OMEGA;
 
     while true
 
